@@ -46,7 +46,7 @@
   #+cljs (#{"true" "on"} v))
 
 (defmethod parse-input :booleans [_ v]
-  (map #+clj #(Boolean/valueOf %) #+cljs #("true" %) v))
+  (map #+clj #(Boolean/valueOf %) #+cljs #{"true" "on"} v))
 
 (defn- parse-double [spec x]
   (when-not (string/blank? x)
